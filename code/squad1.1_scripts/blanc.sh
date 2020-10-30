@@ -1,0 +1,21 @@
+python src/lm/BLANC/run_squad_blanc.py \
+  --do_train \
+  --do_eval \
+  --eval_test \
+  --model spanbert-base-cased \
+  --train_file $DATA_DIR/train-v1.1.json \
+  --dev_file $DATA_DIR/dev-v1.1.json \
+  --test_file $DATA_DIR/test-v1.1.json \
+  --train_batch_size 8 \
+  --eval_batch_size 16  \
+  --learning_rate 2e-5 \
+  --num_train_epochs 3 \
+  --max_seq_length 384 \
+  --doc_stride 128 \
+  --eval_metric span_f1 \
+  --output_dir ./checkpoints/squad1.1/$LABEL/$SEED \
+  --eval_per_epoch 10 \
+  --seed $SEED \
+  --geometric_p $GEOP \
+  --window_size $WINS \
+  --lmb $LMB

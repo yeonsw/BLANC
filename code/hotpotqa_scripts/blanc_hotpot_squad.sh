@@ -1,0 +1,11 @@
+python src/lm/BLANC/run_hotpot_blanc.py \
+  --model spanbert-base-cased \
+  --test_file $DATA_DIR/test.jsonl.gz \
+  --eval_batch_size 16  \
+  --max_seq_length 384 \
+  --doc_stride 128 \
+  --eval_metric span_f1 \
+  --output_dir ./checkpoints/squad1.1/$LABEL/$SEED \
+  --seed $SEED \
+  --geometric_p $GEOP \
+  --window_size $WINS \
