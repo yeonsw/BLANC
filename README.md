@@ -1,6 +1,6 @@
 # Implementation for BLANC
 
-This repository contains code for the paper "Context-Aware Answer Extraction in Question Answering".
+This repository contains code for the paper "Context-Aware Answer Extraction in Question Answering" (EMNLP 2020 long).
 
 ## Build train/dev/test set from NaturalQ-MRQA dataset
 
