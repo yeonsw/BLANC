@@ -76,5 +76,6 @@ This work was partly supported by NAVER Corp. and Institute for Information & co
       Ha, Jung-Woo  and
       Oh, Alice",
     booktitle = "EMNLP",
+    year = "2020",
 }
 ```
