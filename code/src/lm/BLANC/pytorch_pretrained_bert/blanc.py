@@ -1219,7 +1219,7 @@ class BLANC(BertPreTrainedModel):
         attention_s = torch.cumsum(spred[:,1:], -1)
         attention_s = torch.cat(( \
             spred[:,0:1], attention_s), dim=1)
-        attention_e = torch.cumsum(epred[:,1:], -1)
+        attention_e = torch.flip(torch.cumsum(torch.flip(epred[:,1:], dims=[1]), -1), dims=[1])
         attention_e = torch.cat(( \
             epred[:,0:1], attention_e), dim=1)
         
